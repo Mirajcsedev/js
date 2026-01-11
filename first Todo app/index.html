@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
+    <title>Todo app</title>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: poppins,sans-serif;
+    }
+     #TaskUl li {
+        background-color: rgb(255, 255, 255);
+        font-size: 1rem;
+        font-weight: bold;
+        margin: 5px;
+        padding: 10px 15px;
+        border-radius: 10px;
+
+     }
+     #TaskUl li span.active{
+        text-decoration-line: line-through;
+     }
+     #TaskUl li button{
+        background-color: aliceblue;
+        padding: 5px 10px;
+        border-radius: 50%;
+        margin-left: 30px;
+     }
+
+</style> 
+</head>
+<body>
+   <div class="todoApp bg-red-200 h-screen w-full flex items-center justify-center">
+    <div class="Todolists bg-white h-xl min-h-[400px] max-h-[500px] min-w-[40%] rounded-[20px] items-center justify-center flex flex-col shadow-xl p-4">
+    <h1 class="text-center text-6xl p-[20px] font-Poppins uppercase font-bold">Todo App</h1>
+    <div>
+    <input type="text" id="TodoInput" placeholder="Enter Your Todos" class="p-4 rounded-[5px] border-[2px] border-red-200 focus:outline-red-400">
+    <button id="AddTodoBtn" class=" p-4 m-3 rounded-[20px] border-none bg-red-200" onclick="TodoAdd()">Add To list</button>
+    </div>
+    <ul id="TaskUl" class="bg-[aliceblue] px-[10px] py-[20px] my-[0px] mx-[auto] rounded-[10px] overflow-y-auto [scrollbar-width:none]">
+    </ul>
+    <!-- hear come li with tasks with js -->
+
+    </div>
+   </div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
